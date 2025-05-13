@@ -15,5 +15,5 @@ This project simulates a basic traffic light system using Ladder Logic and Struc
 ## Screenshots
 ![Ladder Logic](./LADDER_Prog.png)
 ![Structured_Text](./Structured_Text_Prog_1.png)
-![Visualization](./visualization.png)
+![Visualization](./Visualization.png)
 
