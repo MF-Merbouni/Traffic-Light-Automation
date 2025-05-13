@@ -16,6 +16,18 @@ This project simulates a basic traffic light system using Ladder Logic and Struc
 
 ## Files and Screenshots
 - `Traffic-Light_LADDER.project` – The simulation project file
-- `ladder_screenshot.png` – Logic diagram
-- `visualization_screenshot.png` – Runtime interface
+- `LADDER_Prog.png` – LADDER Logic diagram
+- `Structured_Text_Prog_1.png` - Structured Text
+- `Structured_Text_Prog_2.png` - Structured Text
+- `Visualization.png` – Runtime interface
+- `Structure_Text_Script.txt` - ST Script
+- `Traffic-Light_Simulation.mp4` - Quick Simulation Video
 
+## What I Learned
+- Using TON timers in Ladder Logic and Structured Text (ST)
+- Designing simple HMI visualizations
+- Logic sequencing and safe transitions
+- Writing logic in Ladder Logic (LD) and Structured Text (ST)
+
+---
+ Project by **Mohamed Fathi Merbouni**
