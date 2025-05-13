@@ -1,0 +1,57 @@
+// state = 0 (idle), state = 1 (RED), state = 2 (YELLOW), state = 3 (GREEN),  
+CASE state OF
+	0: //idle
+		IF start = TRUE AND stop <> TRUE THEN 
+		state :=1;
+		END_IF
+	
+	1: //RED LIGHT
+		Red := TRUE;
+		Yellow := FALSE;
+		Green := FALSE;
+		
+		// TIMER RED
+		TON_Red(IN := TRUE, PT := T#7S);
+		Red_time := TON_Red.ET;
+		IF TON_Red.Q = TRUE THEN 
+			TON_Red(in:= FALSE);
+			state := 2;
+		END_IF
+		
+	2: //YELLOW LIGHT
+		Red := FALSE;
+		Yellow := TRUE;
+		Green := FALSE;
+		
+		// TIMER YELLOW
+		TON_Yellow(IN := TRUE, PT := T#6S);
+		Yellow_time := TON_Yellow.ET;
+		IF TON_Yellow.Q = TRUE THEN
+			TON_Yellow(IN := FALSE);
+			state := 3;
+		END_IF
+		
+	3: //GREEN LIGHT
+		Red := FALSE;
+		Yellow := FALSE;
+		Green := TRUE;
+		
+		//GREEN TIMER
+		TON_Green(IN := TRUE, PT := T#6S);
+		Green_time := TON_Green.ET;
+		IF TON_Green.Q = TRUE THEN
+			TON_Green(IN := FALSE);
+			state := 1;
+		END_IF
+END_CASE
+
+//STOP EVERYTHING 
+IF stop = TRUE THEN 
+	state := 0;
+	Red := FALSE;
+	Yellow := FALSE;
+	Green := FALSE;
+	TON_Red(in:= FALSE);
+	TON_Yellow(IN := FALSE);
+	TON_Green(IN := FALSE);
+END_IF
