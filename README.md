@@ -12,8 +12,8 @@ This project simulates a basic traffic light system using Ladder Logic and Struc
 - Structured Text (ST)
 - Built-in visualization editor
 
-## Screenshots
-![Ladder Logic](./LADDER_Prog.png)
-![Structured_Text](./Structured_Text_Prog_1.png)
-![Visualization](./Visualization.png)
+## Files and Screenshots
+- `Traffic-Light_LADDER.project` – The simulation project file
+- `ladder_screenshot.png` – Logic diagram
+- `visualization_screenshot.png` – Runtime interface
 
